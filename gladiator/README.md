@@ -33,8 +33,6 @@ In `arena.js`, create an `Arena` class that meets the following conditions:
 
 ##  Bonus!!!!! 💪💪
 
-Uncomment the bonus sections of the tests when you start working on these!!
-
 - Add a method to remove gladiators from the arena by name
 - Update your winning conditions so that if the gladiator named "Maximus" is in the fight, he wins.
 - Add a method to check to see if the crowd is entertained (`.entertained()`). The crowd is only entertained if Maximus is in the arena.

@@ -8,10 +8,8 @@ The Emperor has commissioned you to build a Gladiator Arena!! You'll be using yo
 
 - Open up `gladiator/index.html`! You'll see some tests!
 - You'll be working in both `gladiator.js` and `arena.js`. 
-- Remember to export your `Gladiator` and `Arena` classes using `module.exports` so they can be properly tested!!!
 - If you can't figure out one of the steps, try writing some pseudocode in a comment in your file. You never know, it may come to you...
 - You can also take a look at the tests to see if you get any hints that way...
-- Also, feel free to comment out sections of the tests while you're working on other parts of the assignment. There are some bonuses that have been commented out already.
 
 ### 🚀 Completion looks like...
 

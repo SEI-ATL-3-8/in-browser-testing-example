@@ -1,6 +1,7 @@
 const expect = chai.expect;
+const assert = chai.assert;
 
-describe('Gladiator class', () => {
+describe('⚔️ Gladiator class', () => {
   it('exists', () => {
     expect(Gladiator).to.be.a('function');
   });
@@ -16,7 +17,7 @@ describe('Gladiator class', () => {
   });
 });
 
-describe('Arena class', () => {
+describe('🏟 Arena class', () => {
   it('exists', () => {
     expect(Arena).to.be.a('function');
   });
@@ -116,80 +117,77 @@ describe('Arena class', () => {
 
 /**
  * BONUSES!!
- * Uncomment these when you decide to get to work on the bonuses
- * Good luck!!!!
 */
 
-// describe('====> Arena class bonuses', () => {
-//   let col;
-//   beforeEach(() => {
-//     col = new Arena('colosseum');
-//     col.addGladiator(new Gladiator('Maximus', 'Trident'));
-//     col.addGladiator(new Gladiator('J', 'Club'));
-//   });
-//   describe('`removeFromArena` method', () => {
-//     it('should exist as a method on the arena class', () => {
-//       expect(col).to.have.property('removeFromArena');
-//       expect(col.removeFromArena).to.be.a('function');
-//     });
-//     it("should remove a gladiator from the arena based on a gladiator's name", () => {
-//       col.removeFromArena('J');
-//       expect(col.gladiators).to.have.lengthOf(1);
-//       expect(col.gladiators[0].name).to.equal('Maximus');
-//     });
-//     it('should error if there is no gladiator by that name', () => {
-//       assert.throws(
-//         () => col.removeFromArena('aleph'),
-//         Error,
-//         'No gladiator by that name!',
-//       );
-//     });
-//   });
-//   describe('new winning conditions', () => {
-//     it('should declare any gladiator named Maximus the winner', () => {
-//       col.fight();
-//       expect(col.gladiators[0].name).to.equal('Maximus');
-//     });
-//   });
-//   describe('`entertained` method', () => {
-//     it('should exist as a method on the arena class', () => {
-//       expect(col).to.have.property('entertained');
-//       expect(col.entertained).to.be.a('function');
-//     });
-//     it('should return `true` if Maximus is in the arena', () => {
-//       expect(col.entertained()).to.equal(true);
-//     });
-//   });
-// });
+describe('🎉 Arena class bonuses', () => {
+  let col;
+  beforeEach(() => {
+    col = new Arena('colosseum');
+    col.addGladiator(new Gladiator('Maximus', 'Trident'));
+    col.addGladiator(new Gladiator('J', 'Club'));
+  });
+  describe('`removeFromArena` method', () => {
+    it('should exist as a method on the arena class', () => {
+      expect(col).to.have.property('removeFromArena');
+      expect(col.removeFromArena).to.be.a('function');
+    });
+    it("should remove a gladiator from the arena based on a gladiator's name", () => {
+      col.removeFromArena('J');
+      expect(col.gladiators).to.have.lengthOf(1);
+      expect(col.gladiators[0].name).to.equal('Maximus');
+    });
+    it('should error if there is no gladiator by that name', () => {
+      assert.throws(
+        () => col.removeFromArena('aleph'),
+        Error,
+        'No gladiator by that name!',
+      );
+    });
+  });
+  describe('new winning conditions', () => {
+    it('should declare any gladiator named Maximus the winner', () => {
+      col.fight();
+      expect(col.gladiators[0].name).to.equal('Maximus');
+    });
+  });
+  describe('`entertained` method', () => {
+    it('should exist as a method on the arena class', () => {
+      expect(col).to.have.property('entertained');
+      expect(col.entertained).to.be.a('function');
+    });
+    it('should return `true` if Maximus is in the arena', () => {
+      expect(col.entertained()).to.equal(true);
+    });
+  });
+});
 
 /**
  * Here are your error handling bonuses. 
- * Uncomment these when you go to work on the error handling part.
  * 
 */
-// describe('====> Error Handling', () => {
-//   describe('Gladiator class error handling', () => {
-//     it('should error when passed something other than trident, weapon, spear', () => {
-//       assert.throws(
-//         () => {
-//           const taco = new Gladiator('taco', 'taco');
-//         },
-//         Error,
-//         'That weapon is not allowed!',
-//       );
-//     });
-//   });
-//   describe('Arena class error handling', () => {
-//     it('should error when `addGladiator` is given something other than a Gladiator', () => {
-//       const col = new Arena('colosseum');
-//       assert.throws(
-//         () => {
-//           col.addGladiator('hello');
-//         },
-//         Error,
-//         "That's not a gladiator!",
-//       );
-//     });
-//   });
-// });
+describe('🎉 Error Handling', () => {
+  describe('Gladiator class error handling', () => {
+    it('should error when passed something other than trident, weapon, spear', () => {
+      assert.throws(
+        () => {
+          const taco = new Gladiator('taco', 'taco');
+        },
+        Error,
+        'That weapon is not allowed!',
+      );
+    });
+  });
+  describe('Arena class error handling', () => {
+    it('should error when `addGladiator` is given something other than a Gladiator', () => {
+      const col = new Arena('colosseum');
+      assert.throws(
+        () => {
+          col.addGladiator('hello');
+        },
+        Error,
+        "That's not a gladiator!",
+      );
+    });
+  });
+});
 
